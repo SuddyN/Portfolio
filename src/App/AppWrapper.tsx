@@ -1,5 +1,5 @@
 import { Route, Routes, useNavigate } from "react-router-dom";
-import { TabMenu } from "primereact/tabmenu";
+import { MegaMenu } from "primereact/megamenu";
 import { Card } from "primereact/card";
 import { Home } from "../pages/Home";
 import "./AppWrapper.css";
@@ -15,12 +15,54 @@ export function AppWrapper() {
       {
         label: "Home",
         icon: "pi pi-fw pi-home",
-        command: () => navigate("/"),
+        command: () => navigate("/Portfolio/"),
       },
       {
         label: "About Me",
         icon: "pi pi-fw pi-question",
-        command: () => navigate("/about"),
+        command: () => navigate("/Portfolio/about"),
+      },
+      {
+        label: "Projects",
+        icon: "pi pi-fw pi-cog",
+        items: [
+          [
+            {
+              label: "Open Source Development",
+              items: [
+                {
+                  label: "HewDraw Remix",
+                  command: () => navigate("/Portfolio/Projects/OpenSource/HDR"),
+                },
+                {
+                  label: "Stage Comparison",
+                  command: () =>
+                    navigate("/Portfolio/Projects/OpenSource/StageComparison"),
+                },
+              ],
+            },
+            {
+              label: "Game Development",
+              items: [
+                {
+                  label: "Coulomball",
+                  command: () =>
+                    navigate("/Portfolio/Projects/GameDevelopment/Coulomball"),
+                },
+                {
+                  label: "Hat Trick",
+                  command: () =>
+                    navigate("/Portfolio/Projects/GameDevelopment/HatTrick"),
+                },
+                {
+                  label: "Asteroids 3D",
+                  command: () =>
+                    navigate("/Portfolio/Projects/GameDevelopment/Asteroids3D"),
+                },
+              ],
+            },
+          ],
+        ],
       },
     ];
 
@@ -29,12 +71,31 @@ export function AppWrapper() {
 
   return (
     <div>
-      <TabMenu model={menuItems()} />
+      <MegaMenu model={menuItems()} />
       <Card>
         <Routes>
           {/* New page components need a Route listing */}
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<AboutMe />} />
+          <Route path="/Portfolio/" element={<Home />} />
+          <Route
+            path="/Portfolio/Projects/OpenSource/HDR"
+            element={<AboutMe />}
+          />
+          <Route
+            path="/Portfolio/Projects/OpenSource/StageComparison"
+            element={<AboutMe />}
+          />
+          <Route
+            path="/Portfolio/Projects/GameDevelopment/Coulomball"
+            element={<AboutMe />}
+          />
+          <Route
+            path="/Portfolio/Projects/GameDevelopment/HatTrick"
+            element={<AboutMe />}
+          />
+          <Route
+            path="/Portfolio/Projects/GameDevelopment/Asteroids3D"
+            element={<AboutMe />}
+          />
         </Routes>
       </Card>
     </div>
