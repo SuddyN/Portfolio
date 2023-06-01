@@ -2,11 +2,12 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import "primereact/resources/themes/bootstrap4-dark-blue/theme.css";
-import { App } from "./App/App.tsx";
+import { App } from "./App";
 import reportWebVitals from "./reportWebVitals";
 
-// @ts-ignore
-const root = ReactDOM.createRoot(document.getElementById("root"));
+const root = ReactDOM.createRoot(
+  document.getElementById("root") as HTMLElement
+);
 root.render(
   <React.StrictMode>
     <App />
