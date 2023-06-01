@@ -1,11 +1,13 @@
 import React from "react";
-import "./App.css";
+import { BrowserRouter } from "react-router-dom";
+import { AppWrapper } from "./AppWrapper";
 
-interface AppState {}
-interface AppProps {}
-
-export class App extends React.Component<AppState, AppProps> {
-  render(): React.ReactNode {
-    return <>It works</>;
+export class App extends React.Component {
+  render() {
+    return (
+      <BrowserRouter>
+        <AppWrapper />
+      </BrowserRouter>
+    );
   }
 }
