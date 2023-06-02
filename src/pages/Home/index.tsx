@@ -30,15 +30,15 @@ export class Home extends React.Component<HomeProps, HomeState> {
               >
                 <p>
                   Thank you for taking the time to view my portfolio! My name is
-                  Nathan, and I'm a Graduate Student, Software Engineer, Game
-                  Developer, community leader, and event organizer in Raleigh,
+                  Nathan, and I'm a graduate student, software engineer, game
+                  developer, community leader, and event organizer in Raleigh,
                   NC.
                 </p>
                 <p>
                   I'm most proficient in frontend design and development - I
                   created this website myself - but I also have experience as a
-                  full-stack software engineer, and know my way around Unity and
-                  Unreal Engine. Please see my resume for more details.
+                  full-stack software engineer, and I know my way around Unity
+                  and Unreal Engine. Please see my resume for more details.
                 </p>
               </ScrollPanel>
               <br />

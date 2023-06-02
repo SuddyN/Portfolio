@@ -72,9 +72,9 @@ export class AboutMe extends React.Component<AboutMeProps, AboutMeState> {
           <div className="col-12 md:col-6 p-6 text-center md:text-left flex align-items-center ">
             <section>
               <span className="block text-6xl font-bold mb-1">I Am A...</span>
-              <ScrollPanel
+              <div
                 style={{
-                  height: '384px',
+                  maxHeight: '384px',
                   maxWidth: '100%',
                   wordBreak: 'break-word',
                 }}
@@ -111,7 +111,7 @@ export class AboutMe extends React.Component<AboutMeProps, AboutMeState> {
                   I'm growing alongside my peers as I strive to create better
                   and better events, experiences, and software.
                 </p>
-              </ScrollPanel>
+              </div>
             </section>
           </div>
         </div>
