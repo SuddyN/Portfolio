@@ -25,52 +25,52 @@ export function AppWrapper() {
         command: () => navigate('/Portfolio/about'),
       },
       {
-        label: 'Projects',
-        icon: 'pi pi-fw pi-cog',
-        items: [
-          [
-            {
-              label: 'Open Source Development',
-              items: [
-                {
-                  label: 'HewDraw Remix',
-                  command: () => navigate('/Portfolio/Projects/OpenSource/HDR'),
-                },
-                {
-                  label: 'Stage Comparison',
-                  command: () =>
-                    navigate('/Portfolio/Projects/OpenSource/StageComparison'),
-                },
-              ],
-            },
-            {
-              label: 'Game Development',
-              items: [
-                {
-                  label: 'Coulomball',
-                  command: () =>
-                    navigate('/Portfolio/Projects/GameDevelopment/Coulomball'),
-                },
-                {
-                  label: 'Hat Trick',
-                  command: () =>
-                    navigate('/Portfolio/Projects/GameDevelopment/HatTrick'),
-                },
-                {
-                  label: 'Asteroids 3D',
-                  command: () =>
-                    navigate('/Portfolio/Projects/GameDevelopment/Asteroids3D'),
-                },
-              ],
-            },
-          ],
-        ],
-      },
-      {
         label: 'Connections',
         icon: 'pi pi-fw pi-users',
         command: () => navigate('/Portfolio/Connections'),
       },
+      // {
+      //   label: 'Projects',
+      //   icon: 'pi pi-fw pi-cog',
+      //   items: [
+      //     [
+      //       {
+      //         label: 'Open Source Development',
+      //         items: [
+      //           {
+      //             label: 'HewDraw Remix',
+      //             command: () => navigate('/Portfolio/Projects/OpenSource/HDR'),
+      //           },
+      //           {
+      //             label: 'Stage Comparison',
+      //             command: () =>
+      //               navigate('/Portfolio/Projects/OpenSource/StageComparison'),
+      //           },
+      //         ],
+      //       },
+      //       {
+      //         label: 'Game Development',
+      //         items: [
+      //           {
+      //             label: 'Coulomball',
+      //             command: () =>
+      //               navigate('/Portfolio/Projects/GameDevelopment/Coulomball'),
+      //           },
+      //           {
+      //             label: 'Hat Trick',
+      //             command: () =>
+      //               navigate('/Portfolio/Projects/GameDevelopment/HatTrick'),
+      //           },
+      //           {
+      //             label: 'Asteroids 3D',
+      //             command: () =>
+      //               navigate('/Portfolio/Projects/GameDevelopment/Asteroids3D'),
+      //           },
+      //         ],
+      //       },
+      //     ],
+      //   ],
+      // },
     ];
 
     return items;
@@ -85,22 +85,6 @@ export function AppWrapper() {
           <Route path="/Portfolio/" element={<Home />} />
           <Route path="/Portfolio/about" element={<AboutMe />} />
           <Route path="/Portfolio/Projects/OpenSource/HDR" element={<HDR />} />
-          <Route
-            path="/Portfolio/Projects/OpenSource/StageComparison"
-            element={<AboutMe />}
-          />
-          <Route
-            path="/Portfolio/Projects/GameDevelopment/Coulomball"
-            element={<AboutMe />}
-          />
-          <Route
-            path="/Portfolio/Projects/GameDevelopment/HatTrick"
-            element={<AboutMe />}
-          />
-          <Route
-            path="/Portfolio/Projects/GameDevelopment/Asteroids3D"
-            element={<AboutMe />}
-          />
           <Route path="/Portfolio/Connections" element={<Connections />} />
         </Routes>
       </Card>

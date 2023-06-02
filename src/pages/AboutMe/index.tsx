@@ -74,7 +74,7 @@ export class AboutMe extends React.Component<AboutMeProps, AboutMeState> {
               <span className="block text-6xl font-bold mb-1">I Am A...</span>
               <ScrollPanel
                 style={{
-                  height: '175px',
+                  height: '384px',
                   maxWidth: '100%',
                   wordBreak: 'break-word',
                 }}
@@ -98,6 +98,19 @@ export class AboutMe extends React.Component<AboutMeProps, AboutMeState> {
                     800 members
                   </li>
                 </ul>
+                <p>
+                  I see it as my biggest strength that no matter what it is, if
+                  I'm passionate about it, I will make my way to the top. I've
+                  developed into a naturally extroverted person, and I enjoy
+                  creating experiences that can put smiles on the faces of
+                  others - especially with those people that I share common
+                  interests.
+                </p>
+                <p>
+                  I'm pursuing my graduate degree at NC State University, and
+                  I'm growing alongside my peers as I strive to create better
+                  and better events, experiences, and software.
+                </p>
               </ScrollPanel>
             </section>
           </div>
