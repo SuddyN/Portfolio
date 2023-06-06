@@ -7,6 +7,7 @@ import { HDR } from '../../Components/HDR/HDR';
 import { StageComparison } from '../../Components/StageComparison';
 import { Coulomball } from '../../Components/Coulomball';
 import { GameEngine } from '../../Components/GameEngine';
+import { ThisWebsite } from '../../Components/ThisWebsite';
 
 interface HomeProps {}
 interface HomeState {}
@@ -50,7 +51,10 @@ export class Home extends React.Component<HomeProps, HomeState> {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Button label="View My Resume" />
+                <Button
+                  label="View My Resume"
+                  className="mr-3 p-button-raised"
+                />
               </Link>
             </section>
           </div>
@@ -87,6 +91,9 @@ export class Home extends React.Component<HomeProps, HomeState> {
         <br />
         <br />
         <GameEngine />
+        <br />
+        <br />
+        <ThisWebsite />
         <br />
         <br />
         <Connections />
