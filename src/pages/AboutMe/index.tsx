@@ -8,7 +8,7 @@ interface AboutMeState {}
 export class AboutMe extends React.Component<AboutMeProps, AboutMeState> {
   images: { src: string; alt?: string }[] = [
     {
-      src: 'https://cdn.discordapp.com/attachments/1034999594012127342/1113998192078495775/PXL_20230506_200232087.MP.jpg',
+      src: 'https://cdn.discordapp.com/attachments/1034999594012127342/1115499987548254288/PXL_20230506_2002320872.MP.jpg',
       alt: '',
     },
     {
@@ -33,7 +33,7 @@ export class AboutMe extends React.Component<AboutMeProps, AboutMeState> {
       <div
         style={{
           width: '100%',
-          maxHeight: '512px',
+          maxHeight: '600px',
           clipPath: 'polygon(0% 0, 92% 0%, 100% 100%, 0 100%)',
           overflow: 'hidden',
         }}
@@ -62,6 +62,7 @@ export class AboutMe extends React.Component<AboutMeProps, AboutMeState> {
               circular
               transitionInterval={4000}
               showIndicators
+              indicatorsPosition="top"
               changeItemOnIndicatorHover
             />
           </div>
