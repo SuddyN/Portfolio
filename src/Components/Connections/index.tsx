@@ -34,10 +34,7 @@ export class Connections extends React.Component<
               </Link>
             </span>
             <div className="text-900 text-xl mb-3 font-medium">GitHub</div>
-            <span className="text-700 line-height-3">
-              {/* Nec tincidunt praesent semper feugiat. Sed adipiscing diam donec
-              adipiscing tristique risus nec feugiat. */}
-            </span>
+            <span className="text-700 line-height-3"></span>
           </div>
           <div className="col-12 md:col-4 mb-4 px-5">
             <span
@@ -53,10 +50,7 @@ export class Connections extends React.Component<
               </Link>
             </span>
             <div className="text-900 text-xl mb-3 font-medium">LinkedIn</div>
-            <span className="text-700 line-height-3">
-              {/* Nec tincidunt praesent semper feugiat. Sed adipiscing diam donec
-              adipiscing tristique risus nec feugiat. */}
-            </span>
+            <span className="text-700 line-height-3"></span>
           </div>
           <div className="col-12 md:col-4 mb-4 px-5">
             <span
@@ -72,10 +66,7 @@ export class Connections extends React.Component<
               </Link>
             </span>
             <div className="text-900 text-xl mb-3 font-medium">Facebook</div>
-            <span className="text-700 line-height-3">
-              {/* Nec tincidunt praesent semper feugiat. Sed adipiscing diam donec
-              adipiscing tristique risus nec feugiat. */}
-            </span>
+            <span className="text-700 line-height-3"></span>
           </div>
         </div>
       </div>

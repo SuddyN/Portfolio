@@ -29,12 +29,32 @@ export class HDR extends React.Component<HDRProps, HDRState> {
             </div>
             <ScrollPanel
               style={{
-                maxHeight: '256px',
+                maxHeight: '275px',
                 maxWidth: '100%',
                 wordBreak: 'break-word',
               }}
             >
-              <p>Placeholder text.</p>
+              <p>
+                HewDraw Remix (HDR) is an open source mod of Super Smash Bros.
+                Ultimate which redefines nearly all of its mechanics and aims to
+                be its own entry in the Super Smash Bros. series. Featuring
+                rewrites every character, HDR is the largest and most ambitious
+                overhaul with thousands of active players.
+              </p>
+              <p>
+                I'm a member of HDR's small main team of developers, and among
+                dozens of other contributors. As a developer of HDR, I have:
+              </p>
+
+              <ul>
+                <li>Designed character reworks</li>
+                <li>Contributed to large mechanical changes</li>
+                <li>Taught other developers the ins-and-outs of our systems</li>
+                <li>
+                  Created, reviewed, and managed open-source pull requests on
+                  GitHub
+                </li>
+              </ul>
             </ScrollPanel>
             <br />
             <Link
@@ -50,7 +70,7 @@ export class HDR extends React.Component<HDRProps, HDRState> {
               rel="noopener noreferrer"
             >
               <Button
-                label="See More on Twitter"
+                label="See More On Twitter"
                 className="p-button-outlined"
               />
             </Link>

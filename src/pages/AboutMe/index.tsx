@@ -8,10 +8,6 @@ interface AboutMeState {}
 export class AboutMe extends React.Component<AboutMeProps, AboutMeState> {
   images: { src: string; alt?: string }[] = [
     {
-      src: 'https://media.discordapp.net/attachments/1034999594012127342/1113604190946742293/Kaylaspook-020.jpg?width=1408&height=940',
-      alt: "Me, dressed up with a prop for my annual Halloween charity event - Kayla's Spooky Smash",
-    },
-    {
       src: 'https://cdn.discordapp.com/attachments/1034999594012127342/1113998192078495775/PXL_20230506_200232087.MP.jpg',
       alt: '',
     },

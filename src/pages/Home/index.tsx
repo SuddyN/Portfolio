@@ -3,7 +3,10 @@ import { ScrollPanel } from 'primereact/scrollpanel';
 import { Connections } from '../../Components/Connections';
 import { Link } from 'react-router-dom';
 import { Button } from 'primereact/button';
-import { HDR } from '../HDR/HDR';
+import { HDR } from '../../Components/HDR/HDR';
+import { StageComparison } from '../../Components/StageComparison';
+import { Coulomball } from '../../Components/Coulomball';
+import { GameEngine } from '../../Components/GameEngine';
 
 interface HomeProps {}
 interface HomeState {}
@@ -23,7 +26,7 @@ export class Home extends React.Component<HomeProps, HomeState> {
               </div>
               <ScrollPanel
                 style={{
-                  maxHeight: '256px',
+                  maxHeight: '275px',
                   maxWidth: '100%',
                   wordBreak: 'break-word',
                 }}
@@ -47,14 +50,13 @@ export class Home extends React.Component<HomeProps, HomeState> {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Button label="View Resume" />
+                <Button label="View My Resume" />
               </Link>
             </section>
           </div>
           <div className="col-12 md:col-6 overflow-hidden">
             <img
               src="https://cdn.discordapp.com/attachments/1034999594012127342/1113604190946742293/Kaylaspook-020.jpg"
-              alt="hero-1"
               className="md:ml-auto block md:h-full"
               style={{
                 clipPath: 'polygon(8% 0, 100% 0%, 100% 100%, 0 100%)',
@@ -76,6 +78,16 @@ export class Home extends React.Component<HomeProps, HomeState> {
           </div>
         </div>
         <HDR />
+        <br />
+        <br />
+        <StageComparison />
+        <br />
+        <br />
+        <Coulomball />
+        <br />
+        <br />
+        <GameEngine />
+        <br />
         <br />
         <Connections />
       </>

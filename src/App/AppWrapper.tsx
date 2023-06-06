@@ -4,7 +4,7 @@ import { Card } from 'primereact/card';
 import { Home } from '../pages/Home';
 import './AppWrapper.css';
 import { AboutMe } from '../pages/AboutMe';
-import { HDR } from '../pages/HDR/HDR';
+import { HDR } from '../Components/HDR/HDR';
 import { Connections } from '../Components/Connections';
 
 /// AppWrapper needs to be a functional component, to get access to useNavigate hook
