@@ -61,7 +61,13 @@ export class GameEngine extends React.Component<
             </Link>
           </section>
         </div>
-        <div className="col-12 md:col-6 overflow-hidden">
+        <div
+          className="col-12 md:col-6 overflow-hidden"
+          style={{
+            maxHeight: '640px',
+            overflow: 'hidden',
+          }}
+        >
           <img
             src="https://cdn.discordapp.com/attachments/1034999594012127342/1115396678367846441/61b62ba0e59dded311918ad7_CSC481Client_GgW2XYQJjN.png"
             className="md:ml-auto block md:h-full"

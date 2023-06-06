@@ -58,7 +58,13 @@ export class Home extends React.Component<HomeProps, HomeState> {
               </Link>
             </section>
           </div>
-          <div className="col-12 md:col-6 overflow-hidden">
+          <div
+            className="col-12 md:col-6 overflow-hidden"
+            style={{
+              maxHeight: '640px',
+              overflow: 'hidden',
+            }}
+          >
             <img
               src="https://cdn.discordapp.com/attachments/1034999594012127342/1113604190946742293/Kaylaspook-020.jpg"
               className="md:ml-auto block md:h-full"

@@ -14,7 +14,13 @@ export class ThisWebsite extends React.Component<
   render() {
     return (
       <div className="grid grid-nogutter surface-section text-800">
-        <div className="col-12 md:col-6 overflow-hidden">
+        <div
+          className="col-12 md:col-6 overflow-hidden"
+          style={{
+            maxHeight: '640px',
+            overflow: 'hidden',
+          }}
+        >
           <img
             src="https://cdn.discordapp.com/attachments/1034999594012127342/1115480893071564901/0_CBjisl422hUyLxiG.png"
             className="md:ml-auto block md:h-full"
