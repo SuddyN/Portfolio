@@ -5,7 +5,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Divider from '@mui/material/Divider';
 import AppTheme from '../shared-theme/AppTheme';
 import AppAppBar from '../components/AppAppBar';
-import Hero from '../components/Hero';
+import AboutMe from '../components/AboutMe';
 import LogoCollection from '../components/LogoCollection';
 import Highlights from '../components/Highlights';
 import Pricing from '../components/Pricing';
@@ -19,19 +19,18 @@ export default function Home() {
     <AppTheme>
       <CssBaseline enableColorScheme />
       <AppAppBar />
-      <Hero />
+      <AboutMe />
       <div>
         <LogoCollection />
-        <Features />
-        <Divider />
-        <Testimonials />
         <Divider />
         <Highlights />
         <Divider />
-        <Pricing />
+        <Features />
         <Divider />
-        <FAQ />
-        <Divider />
+        {/* <Testimonials />
+        <Divider /> */}
+        {/* <FAQ />
+        <Divider /> */}
         <Footer />
       </div>
     </AppTheme>

@@ -3,12 +3,12 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
 import InputLabel from '@mui/material/InputLabel';
-import Link from '@mui/material/Link';
 import Stack from '@mui/material/Stack';
 import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
 import visuallyHidden from '@mui/utils/visuallyHidden';
 import { styled } from '@mui/material/styles';
+import { Tooltip } from '@mui/material';
 
 const StyledBox = styled('div')(({ theme }) => ({
   alignSelf: 'center',
@@ -21,21 +21,21 @@ const StyledBox = styled('div')(({ theme }) => ({
   border: '1px solid',
   borderColor: theme.palette.grey[200],
   boxShadow: '0 0 12px 8px hsla(220, 25%, 80%, 0.2)',
-  backgroundImage: `url(${process.env.TEMPLATE_IMAGE_URL || 'https://mui.com'}/static/screenshots/material-ui/getting-started/templates/dashboard.jpg)`,
+  backgroundImage: `url(/images/github-dark.png)`,
   backgroundSize: 'cover',
   [theme.breakpoints.up('sm')]: {
-    marginTop: theme.spacing(10),
+    marginTop: theme.spacing(8),
     height: 700,
   },
   ...theme.applyStyles('dark', {
     boxShadow: '0 0 24px 12px hsla(210, 100%, 25%, 0.2)',
-    backgroundImage: `url(${process.env.TEMPLATE_IMAGE_URL || 'https://mui.com'}/static/screenshots/material-ui/getting-started/templates/dashboard-dark.jpg)`,
+    backgroundImage: `url(/images/github-dark.png)`,
     outlineColor: 'hsla(220, 20%, 42%, 0.1)',
     borderColor: theme.palette.grey[700],
   }),
 }));
 
-export default function Hero() {
+export default function AboutMe() {
   return (
     <Box
       id="hero"
@@ -74,7 +74,7 @@ export default function Hero() {
               fontSize: 'clamp(3rem, 10vw, 3.5rem)',
             }}
           >
-            Our&nbsp;latest&nbsp;
+            I'm&nbsp;
             <Typography
               component="span"
               variant="h1"
@@ -86,25 +86,55 @@ export default function Hero() {
                 }),
               })}
             >
-              products
+              Nathan&nbsp;
+            </Typography>
+            <Typography
+              component="span"
+              variant="h1"
+              sx={(theme) => ({
+                fontSize: 'inherit',
+                color: 'primary.main',
+                ...theme.applyStyles('dark', {
+                  color: 'primary.light',
+                }),
+              })}
+            >
+              Sudduth
             </Typography>
           </Typography>
           <Typography
+          variant="h3"
             sx={{
               textAlign: 'center',
               color: 'text.secondary',
-              width: { sm: '100%', md: '80%' },
+              width: { sm: '100%', md: '100%' },
             }}
           >
-            Explore our cutting-edge dashboard, delivering high-quality solutions
-            tailored to your needs. Elevate your experience with top-tier features
-            and services.
+            I'm a Full-Stack Software Engineer, Game Developer, Event Organizer, Community Leader, and life-long learner!
+          </Typography>
+          <Typography
+          variant="h5"
+            sx={{
+              textAlign: 'center',
+              color: 'text.secondary',
+              width: { sm: '100%', md: '100%' },
+            }}
+          >
+            I graduated from NC State University with a Masters of Computer Science.<br />
+            In my free time, I like to lead, create, and tinker -- I maintain several projects related to the Super Smash Bros. gameplay mod called HewDraw Remix, run local tournaments and fundraising events, and program Single Board Computers to improve my home and assist other projects!
+          </Typography>
+          <Typography
+            variant="caption"
+            color="text.secondary"
+            sx={{  pt: 2, textAlign: 'center' }}
+          >
+            I'm searching for Full-Stack Software Engineer roles!
           </Typography>
           <Stack
             direction={{ xs: 'column', sm: 'row' }}
             spacing={1}
             useFlexGap
-            sx={{ pt: 2, width: { xs: '100%', sm: '350px' } }}
+            sx={{width: { xs: '100%', sm: '350px' } }}
           >
             <InputLabel htmlFor="email-hero" sx={visuallyHidden}>
               Email
@@ -114,8 +144,7 @@ export default function Hero() {
               hiddenLabel
               size="small"
               variant="outlined"
-              aria-label="Enter your email address"
-              placeholder="Your email address"
+              placeholder="suddy121800@hotmail.com"
               fullWidth
               slotProps={{
                 htmlInput: {
@@ -123,29 +152,31 @@ export default function Hero() {
                   'aria-label': 'Enter your email address',
                 },
               }}
+              value="suddy121800@hotmail.com"
+              disabled
             />
             <Button
               variant="contained"
               color="primary"
               size="small"
               sx={{ minWidth: 'fit-content' }}
+              onClick={(e) => {
+                window.open("mailto:suddy121800@hotmail.com", "_blank")
+              }}
             >
-              Start now
+              Email Me
             </Button>
           </Stack>
-          <Typography
-            variant="caption"
-            color="text.secondary"
-            sx={{ textAlign: 'center' }}
-          >
-            By clicking &quot;Start now&quot; you agree to our&nbsp;
-            <Link href="#" color="primary">
-              Terms & Conditions
-            </Link>
-            .
-          </Typography>
         </Stack>
-        <StyledBox id="image" />
+        <Tooltip title="My GitHub">
+          <StyledBox id="image"
+            aria-label='My GitHub'
+            sx={{cursor: "pointer"}}
+            onClick={(e) => {
+              window.open("https://github.com/SuddyN", "_blank")
+            }}
+          />
+        </Tooltip>
       </Container>
     </Box>
   );
