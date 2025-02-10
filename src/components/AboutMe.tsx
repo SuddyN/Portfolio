@@ -30,7 +30,7 @@ export default function AboutMe() {
           flexDirection: 'column',
           alignItems: 'center',
           pt: { xs: 14, sm: 20 },
-          pb: { xs: 6, sm: 9 },
+          pb: { xs: 8, sm: 16 },
         }}
       >
         <Stack

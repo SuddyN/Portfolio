@@ -5,56 +5,60 @@ import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid2';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
-import AutoFixHighRoundedIcon from '@mui/icons-material/AutoFixHighRounded';
-import ConstructionRoundedIcon from '@mui/icons-material/ConstructionRounded';
-import QueryStatsRoundedIcon from '@mui/icons-material/QueryStatsRounded';
-import SettingsSuggestRoundedIcon from '@mui/icons-material/SettingsSuggestRounded';
-import SupportAgentRoundedIcon from '@mui/icons-material/SupportAgentRounded';
-import ThumbUpAltRoundedIcon from '@mui/icons-material/ThumbUpAltRounded';
+import LogoCollection from './LogoCollection';
+import FullWidthImageBox from './FullWidthImageBox';
+import {
+  AllInclusiveRounded,
+  ApiRounded,
+  AutoAwesomeRounded,
+  BugReportRounded,
+  LanguageRounded,
+  SchoolRounded,
+} from '@mui/icons-material';
 
 const items = [
   {
-    icon: <SettingsSuggestRoundedIcon />,
-    title: 'Adaptable performance',
+    icon: <ApiRounded />,
+    title: 'RESTful APIs',
     description:
-      'Our product effortlessly adjusts to your needs, boosting efficiency and simplifying your tasks.',
+      '2+ years of experience engineering APIs that conform to RESTful standards, in C# with ASP.NET, EF Core, and PostgreSQL or MySQL.',
   },
   {
-    icon: <ConstructionRoundedIcon />,
-    title: 'Built to last',
+    icon: <LanguageRounded />,
+    title: 'Modern Web Development',
     description:
-      'Experience unmatched durability that goes above and beyond with lasting investment.',
+      '2+ years of experience developing modern Web UI with TypeScript/JavaScript & React.',
   },
   {
-    icon: <ThumbUpAltRoundedIcon />,
-    title: 'Great user experience',
+    icon: <AutoAwesomeRounded />,
+    title: 'CSS Frameworks',
     description:
-      'Integrate our product into your routine with an intuitive and easy-to-use interface.',
+      'Varied experience with CSS frameworks such as Tailwind CSS, Material UI, PrimeReact, and Sass.',
   },
   {
-    icon: <AutoFixHighRoundedIcon />,
-    title: 'Innovative functionality',
+    icon: <AllInclusiveRounded />,
+    title: 'CI/CD & Version Control',
     description:
-      'Stay ahead with features that set new standards, addressing your evolving needs better than the rest.',
+      'Familiarity with CI/CD using SonarCube and GitHub Actions, Tagging, & Releases.',
   },
   {
-    icon: <SupportAgentRoundedIcon />,
-    title: 'Reliable support',
+    icon: <BugReportRounded />,
+    title: 'Test Oriented Development',
     description:
-      'Count on our responsive customer support, offering assistance that goes beyond the purchase.',
+      '2+ years of experience writing Unit, Integration, and End-to-End Tests with tools like XUnit, Jest, React Testing Library, Selenium, and Cucumber.',
   },
   {
-    icon: <QueryStatsRoundedIcon />,
-    title: 'Precision in every detail',
+    icon: <SchoolRounded />,
+    title: 'Lifelong Learning',
     description:
-      'Enjoy a meticulously crafted product where small touches make a significant impact on your overall experience.',
+      'Passionate for learning new tools, developing skills, and collaborating to build the team up!',
   },
 ];
 
-export default function Highlights() {
+export default function Skillset() {
   return (
     <Box
-      id="highlights"
+      id="skillset"
       sx={{
         pt: { xs: 4, sm: 12 },
         pb: { xs: 8, sm: 16 },
@@ -78,7 +82,7 @@ export default function Highlights() {
           }}
         >
           <Typography component="h2" variant="h4" gutterBottom>
-            Highlights
+            Skillset
           </Typography>
           <Typography variant="body1" sx={{ color: 'grey.400' }}>
             Explore why our product stands out: adaptability, durability,
@@ -116,6 +120,12 @@ export default function Highlights() {
           ))}
         </Grid>
       </Container>
+      <LogoCollection />
+      <FullWidthImageBox
+        label="Click to open my GitHub"
+        src="/images/github-dark.png"
+        url="https://github.com/SuddyN"
+      />
     </Box>
   );
 }

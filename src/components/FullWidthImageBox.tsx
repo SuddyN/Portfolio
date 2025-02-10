@@ -40,7 +40,6 @@ export default function FullWidthImageBox(props: FullWidthImageBoxProps) {
         flexDirection: 'column',
         alignItems: 'center',
         pt: { xs: 4, sm: 6 },
-        pb: { xs: 8, sm: 16 },
       }}
     >
       <Tooltip title={props.label}>
