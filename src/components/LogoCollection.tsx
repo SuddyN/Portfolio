@@ -19,7 +19,7 @@ const logos: [string, string, boolean?, string?, string?][] = [
 export default function LogoCollection() {
   const theme = useTheme();
   return (
-    <Box id="logoCollection" sx={{ py: 4 }}>
+    <Box id="logoCollection" sx={{ py: 2 }}>
       <Grid container sx={{ justifyContent: 'center', mt: 0.5, opacity: 1.0 }}>
         {logos.map((logo, index) => (
           <Grid item key={index}>
@@ -30,7 +30,7 @@ export default function LogoCollection() {
                 style={{
                   width: 'auto',
                   height: '100px',
-                  margin: '0 16px',
+                  margin: '16px 16px',
                   opacity: 1.0,
                   filter: !logo[2] 
                     ? undefined 

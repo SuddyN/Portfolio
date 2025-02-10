@@ -13,6 +13,7 @@ import Features from '../components/Features';
 import Testimonials from '../components/Testimonials';
 import FAQ from '../components/FAQ';
 import Footer from '../components/Footer';
+import FullWidthImageBox from '@/components/FullWidthImageBox';
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
       <AboutMe />
       <div>
         <LogoCollection />
+        <FullWidthImageBox label='Click to open my GitHub' src='/images/github-dark.png' url='https://github.com/SuddyN'/>
         <Divider />
         <Highlights />
         <Divider />

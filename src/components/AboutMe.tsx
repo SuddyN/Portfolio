@@ -7,33 +7,6 @@ import Stack from '@mui/material/Stack';
 import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
 import visuallyHidden from '@mui/utils/visuallyHidden';
-import { styled } from '@mui/material/styles';
-import { Tooltip } from '@mui/material';
-
-const StyledBox = styled('div')(({ theme }) => ({
-  alignSelf: 'center',
-  width: '100%',
-  height: 400,
-  marginTop: theme.spacing(8),
-  borderRadius: theme.shape.borderRadius,
-  outline: '6px solid',
-  outlineColor: 'hsla(220, 25%, 80%, 0.2)',
-  border: '1px solid',
-  borderColor: theme.palette.grey[200],
-  boxShadow: '0 0 12px 8px hsla(220, 25%, 80%, 0.2)',
-  backgroundImage: `url(/images/github-dark.png)`,
-  backgroundSize: 'cover',
-  [theme.breakpoints.up('sm')]: {
-    marginTop: theme.spacing(8),
-    height: 700,
-  },
-  ...theme.applyStyles('dark', {
-    boxShadow: '0 0 24px 12px hsla(210, 100%, 25%, 0.2)',
-    backgroundImage: `url(/images/github-dark.png)`,
-    outlineColor: 'hsla(220, 20%, 42%, 0.1)',
-    borderColor: theme.palette.grey[700],
-  }),
-}));
 
 export default function AboutMe() {
   return (
@@ -57,7 +30,7 @@ export default function AboutMe() {
           flexDirection: 'column',
           alignItems: 'center',
           pt: { xs: 14, sm: 20 },
-          pb: { xs: 8, sm: 12 },
+          pb: { xs: 6, sm: 9 },
         }}
       >
         <Stack
@@ -74,7 +47,7 @@ export default function AboutMe() {
               fontSize: 'clamp(3rem, 10vw, 3.5rem)',
             }}
           >
-            I'm&nbsp;
+            Hi,&nbsp;I'm&nbsp;
             <Typography
               component="span"
               variant="h1"
@@ -168,15 +141,6 @@ export default function AboutMe() {
             </Button>
           </Stack>
         </Stack>
-        <Tooltip title="My GitHub">
-          <StyledBox id="image"
-            aria-label='My GitHub'
-            sx={{cursor: "pointer"}}
-            onClick={(e) => {
-              window.open("https://github.com/SuddyN", "_blank")
-            }}
-          />
-        </Tooltip>
       </Container>
     </Box>
   );
