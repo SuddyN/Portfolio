@@ -76,30 +76,37 @@ export default function AboutMe() {
             </Typography>
           </Typography>
           <Typography
-          variant="h3"
+            variant="h3"
             sx={{
               textAlign: 'center',
               color: 'text.secondary',
               width: { sm: '100%', md: '100%' },
             }}
           >
-            I'm a Full-Stack Software Engineer, Game Developer, Event Organizer, Community Leader, and life-long learner!
+            I'm a Full-Stack Software Engineer, Game Developer, Event Organizer,
+            Community Leader, and life-long learner!
           </Typography>
           <Typography
-          variant="h5"
+            variant="h5"
             sx={{
               textAlign: 'center',
               color: 'text.secondary',
               width: { sm: '100%', md: '100%' },
             }}
           >
-            I graduated from NC State University with a Masters of Computer Science.<br />
-            In my free time, I like to lead, create, and tinker -- I maintain several projects related to the Super Smash Bros. gameplay mod called HewDraw Remix, run local tournaments and fundraising events, and program Single Board Computers to improve my home and assist other projects!
+            I graduated from NC State University with a Masters of Computer
+            Science.
+            <br />
+            In my free time, I like to lead, create, and tinker -- I maintain
+            several projects related to the Super Smash Bros. gameplay mod
+            called HewDraw Remix, run local tournaments and fundraising events,
+            and program Single Board Computers to improve my home and assist
+            other projects!
           </Typography>
           <Typography
             variant="caption"
             color="text.secondary"
-            sx={{  pt: 2, textAlign: 'center' }}
+            sx={{ pt: 2, textAlign: 'center' }}
           >
             I'm searching for Full-Stack Software Engineer roles!
           </Typography>
@@ -107,7 +114,7 @@ export default function AboutMe() {
             direction={{ xs: 'column', sm: 'row' }}
             spacing={1}
             useFlexGap
-            sx={{width: { xs: '100%', sm: '350px' } }}
+            sx={{ width: { xs: '100%', sm: '350px' } }}
           >
             <InputLabel htmlFor="email-hero" sx={visuallyHidden}>
               Email
@@ -134,7 +141,7 @@ export default function AboutMe() {
               size="small"
               sx={{ minWidth: 'fit-content' }}
               onClick={(e) => {
-                window.open("mailto:suddy121800@hotmail.com", "_blank")
+                window.open('mailto:suddy121800@hotmail.com', '_blank');
               }}
             >
               Email Me

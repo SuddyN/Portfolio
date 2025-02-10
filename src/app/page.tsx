@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import * as React from 'react';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -23,7 +23,11 @@ export default function Home() {
       <AboutMe />
       <div>
         <LogoCollection />
-        <FullWidthImageBox label='Click to open my GitHub' src='/images/github-dark.png' url='https://github.com/SuddyN'/>
+        <FullWidthImageBox
+          label="Click to open my GitHub"
+          src="/images/github-dark.png"
+          url="https://github.com/SuddyN"
+        />
         <Divider />
         <Highlights />
         <Divider />

@@ -44,12 +44,13 @@ export default function FullWidthImageBox(props: FullWidthImageBoxProps) {
       }}
     >
       <Tooltip title={props.label}>
-        <StyledBox id="image"
+        <StyledBox
+          id="image"
           aria-label={props.label}
-          sx={{cursor: props.url ? "pointer" : undefined}}
+          sx={{ cursor: props.url ? 'pointer' : undefined }}
           onClick={(e) => {
             if (!props.url) return;
-            window.open(props.url, "_blank")
+            window.open(props.url, '_blank');
           }}
         />
       </Tooltip>
