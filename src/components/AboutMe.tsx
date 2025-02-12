@@ -116,22 +116,16 @@ export default function AboutMe() {
             useFlexGap
             sx={{ width: { xs: '100%', sm: '350px' } }}
           >
-            <InputLabel htmlFor="email-hero" sx={visuallyHidden}>
+            <InputLabel htmlFor="email-aboutme" sx={visuallyHidden}>
               Email
             </InputLabel>
             <TextField
-              id="email-hero"
+              id="email-aboutme"
               hiddenLabel
               size="small"
               variant="outlined"
               placeholder="suddy121800@hotmail.com"
               fullWidth
-              slotProps={{
-                htmlInput: {
-                  autoComplete: 'off',
-                  'aria-label': 'Enter your email address',
-                },
-              }}
               value="suddy121800@hotmail.com"
               disabled
             />

@@ -12,7 +12,9 @@ import Drawer from '@mui/material/Drawer';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 import ColorModeIconDropdown from '../shared-theme/ColorModeIconDropdown';
-import Sitemark from './SitemarkIcon';
+import InputLabel from '@mui/material/InputLabel';
+import TextField from '@mui/material/TextField';
+import visuallyHidden from '@mui/utils/visuallyHidden';
 
 const StyledToolbar = styled(Toolbar)(({ theme }) => ({
   display: 'flex',
@@ -51,35 +53,41 @@ export default function AppAppBar() {
           <Box
             sx={{ flexGrow: 1, display: 'flex', alignItems: 'center', px: 0 }}
           >
-            <Sitemark />
             <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-              <Button variant="text" color="info" size="small">
-                Features
-              </Button>
-              <Button variant="text" color="info" size="small">
-                Testimonials
-              </Button>
-              <Button variant="text" color="info" size="small">
-                Highlights
-              </Button>
-              <Button variant="text" color="info" size="small">
-                Pricing
+              <Button
+                variant="text"
+                color="info"
+                size="small"
+                sx={(theme) => ({
+                  color: 'primary.main',
+                  ...theme.applyStyles('dark', {
+                    color: 'primary.light',
+                  }),
+                })}
+              >
+                Skillset
               </Button>
               <Button
                 variant="text"
                 color="info"
                 size="small"
-                sx={{ minWidth: 0 }}
+                sx={(theme) => ({
+                  color: 'primary.main',
+                  ...theme.applyStyles('dark', {
+                    color: 'primary.light',
+                  }),
+                })}
               >
-                FAQ
+                Projects
               </Button>
-              <Button
-                variant="text"
-                color="info"
-                size="small"
-                sx={{ minWidth: 0 }}
-              >
-                Blog
+              <Button variant="text" color="info" size="small">
+                HewDraw Remix
+              </Button>
+              <Button variant="text" color="info" size="small">
+                HDRStageTools
+              </Button>
+              <Button variant="text" color="info" size="small">
+                StartGGDiscordActions
               </Button>
             </Box>
           </Box>
@@ -90,11 +98,29 @@ export default function AppAppBar() {
               alignItems: 'center',
             }}
           >
-            <Button color="primary" variant="text" size="small">
-              Sign in
-            </Button>
-            <Button color="primary" variant="contained" size="small">
-              Sign up
+            <InputLabel htmlFor="email-appbar" sx={visuallyHidden}>
+              Email
+            </InputLabel>
+            <TextField
+              id="email-appbar"
+              hiddenLabel
+              size="small"
+              variant="outlined"
+              placeholder="suddy121800@hotmail.com"
+              fullWidth
+              value="suddy121800@hotmail.com"
+              disabled
+            />
+            <Button
+              variant="contained"
+              color="primary"
+              size="small"
+              sx={{ minWidth: 'fit-content' }}
+              onClick={(e) => {
+                window.open('mailto:suddy121800@hotmail.com', '_blank');
+              }}
+            >
+              Email Me
             </Button>
             <ColorModeIconDropdown />
           </Box>
@@ -125,23 +151,57 @@ export default function AppAppBar() {
                   </IconButton>
                 </Box>
 
-                <MenuItem>Features</MenuItem>
-                <MenuItem>Testimonials</MenuItem>
-                <MenuItem>Highlights</MenuItem>
-                <MenuItem>Pricing</MenuItem>
-                <MenuItem>FAQ</MenuItem>
-                <MenuItem>Blog</MenuItem>
+                <MenuItem
+                  sx={(theme) => ({
+                    color: 'primary.main',
+                    ...theme.applyStyles('dark', {
+                      color: 'primary.light',
+                    }),
+                  })}
+                >
+                  Skillset
+                </MenuItem>
+                <MenuItem
+                  sx={(theme) => ({
+                    color: 'primary.main',
+                    ...theme.applyStyles('dark', {
+                      color: 'primary.light',
+                    }),
+                  })}
+                >
+                  Projects
+                </MenuItem>
+                <MenuItem>HewDraw Remix</MenuItem>
+                <MenuItem>HDRStageTools</MenuItem>
+                <MenuItem>StartGGDiscordActions</MenuItem>
                 <Divider sx={{ my: 3 }} />
-                <MenuItem>
-                  <Button color="primary" variant="contained" fullWidth>
-                    Sign up
-                  </Button>
-                </MenuItem>
-                <MenuItem>
-                  <Button color="primary" variant="outlined" fullWidth>
-                    Sign in
-                  </Button>
-                </MenuItem>
+                <InputLabel htmlFor="email-menu" sx={visuallyHidden}>
+                  Email
+                </InputLabel>
+                <TextField
+                  id="email-menu"
+                  hiddenLabel
+                  size="small"
+                  variant="outlined"
+                  placeholder="suddy121800@hotmail.com"
+                  fullWidth
+                  value="suddy121800@hotmail.com"
+                  disabled
+                  sx={{ pb: 1 }}
+                />
+                <Button
+                  variant="contained"
+                  color="primary"
+                  fullWidth
+                  size="small"
+                  sx={{ minWidth: 'fit-content' }}
+                  onClick={(e) => {
+                    window.open('mailto:suddy121800@hotmail.com', '_blank');
+                  }}
+                >
+                  Email Me
+                </Button>
+                <MenuItem></MenuItem>
               </Box>
             </Drawer>
           </Box>
