@@ -30,11 +30,64 @@ const StyledToolbar = styled(Toolbar)(({ theme }) => ({
   padding: '8px 12px',
 }));
 
-export default function AppAppBar() {
+export interface AppAppBarProps {
+  aboutMeRef: React.RefObject<HTMLDivElement | null>;
+  skillsetRef: React.RefObject<HTMLDivElement | null>;
+  projectsRef: React.RefObject<HTMLDivElement | null>;
+  footerRef: React.RefObject<HTMLDivElement | null>;
+}
+
+interface PageScrollProps {
+  label: string;
+  onClick?: React.MouseEventHandler<unknown> | undefined;
+}
+
+export const PageScrollButton = ({ label, onClick }: PageScrollProps) => {
+  return (
+    <Button
+      variant="text"
+      color="info"
+      size="small"
+      sx={(theme) => ({
+        color: 'primary.main',
+        ...theme.applyStyles('dark', {
+          color: 'primary.light',
+        }),
+      })}
+      onClick={onClick}
+    >
+      {label}
+    </Button>
+  );
+};
+
+export const PageScrollMenuItem = ({ label, onClick }: PageScrollProps) => {
+  return (
+    <MenuItem
+      sx={(theme) => ({
+        color: 'primary.main',
+        ...theme.applyStyles('dark', {
+          color: 'primary.light',
+        }),
+      })}
+      onClick={onClick}
+    >
+      {label}
+    </MenuItem>
+  );
+};
+
+export default function AppAppBar({
+  aboutMeRef,
+  skillsetRef,
+  projectsRef,
+  footerRef,
+}: AppAppBarProps) {
   const [open, setOpen] = React.useState(false);
 
-  const toggleDrawer = (newOpen: boolean) => () => {
+  const toggleDrawer = (newOpen: boolean, callback?: Function) => () => {
     setOpen(newOpen);
+    callback?.();
   };
 
   return (
@@ -54,32 +107,30 @@ export default function AppAppBar() {
             sx={{ flexGrow: 1, display: 'flex', alignItems: 'center', px: 0 }}
           >
             <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-              <Button
-                variant="text"
-                color="info"
-                size="small"
-                sx={(theme) => ({
-                  color: 'primary.main',
-                  ...theme.applyStyles('dark', {
-                    color: 'primary.light',
-                  }),
-                })}
-              >
-                Skillset
-              </Button>
-              <Button
-                variant="text"
-                color="info"
-                size="small"
-                sx={(theme) => ({
-                  color: 'primary.main',
-                  ...theme.applyStyles('dark', {
-                    color: 'primary.light',
-                  }),
-                })}
-              >
-                Projects
-              </Button>
+              <PageScrollButton
+                label="About Me"
+                onClick={() =>
+                  aboutMeRef.current?.scrollIntoView({ behavior: 'smooth' })
+                }
+              />
+              <PageScrollButton
+                label="Skillset"
+                onClick={() =>
+                  skillsetRef.current?.scrollIntoView({ behavior: 'smooth' })
+                }
+              />
+              <PageScrollButton
+                label="Projects"
+                onClick={() =>
+                  projectsRef.current?.scrollIntoView({ behavior: 'smooth' })
+                }
+              />
+              <PageScrollButton
+                label="Footer"
+                onClick={() =>
+                  footerRef.current?.scrollIntoView({ behavior: 'smooth' })
+                }
+              />
               <Button variant="text" color="info" size="small">
                 HewDraw Remix
               </Button>
@@ -151,26 +202,30 @@ export default function AppAppBar() {
                   </IconButton>
                 </Box>
 
-                <MenuItem
-                  sx={(theme) => ({
-                    color: 'primary.main',
-                    ...theme.applyStyles('dark', {
-                      color: 'primary.light',
-                    }),
-                  })}
-                >
-                  Skillset
-                </MenuItem>
-                <MenuItem
-                  sx={(theme) => ({
-                    color: 'primary.main',
-                    ...theme.applyStyles('dark', {
-                      color: 'primary.light',
-                    }),
-                  })}
-                >
-                  Projects
-                </MenuItem>
+                <PageScrollMenuItem
+                  label="About Me"
+                  onClick={toggleDrawer(false, () =>
+                    aboutMeRef.current?.scrollIntoView({ behavior: 'smooth' })
+                  )}
+                />
+                <PageScrollMenuItem
+                  label="Skillset"
+                  onClick={toggleDrawer(false, () =>
+                    skillsetRef.current?.scrollIntoView({ behavior: 'smooth' })
+                  )}
+                />
+                <PageScrollMenuItem
+                  label="Projects"
+                  onClick={toggleDrawer(false, () =>
+                    projectsRef.current?.scrollIntoView({ behavior: 'smooth' })
+                  )}
+                />
+                <PageScrollMenuItem
+                  label="Footer"
+                  onClick={toggleDrawer(false, () =>
+                    footerRef.current?.scrollIntoView({ behavior: 'smooth' })
+                  )}
+                />
                 <MenuItem>HewDraw Remix</MenuItem>
                 <MenuItem>HDR Stage Tools</MenuItem>
                 <MenuItem>StartGG Discord Actions</MenuItem>

@@ -2,26 +2,36 @@
 
 import * as React from 'react';
 import CssBaseline from '@mui/material/CssBaseline';
-import Divider from '@mui/material/Divider';
 import AppTheme from '../shared-theme/AppTheme';
 import AppAppBar from '../components/AppAppBar';
 import AboutMe from '../components/AboutMe';
 import Features from '../components/Features';
 import Footer from '../components/Footer';
 import Skillset from '@/components/Skillset';
+import { RefForwardingDivider } from '@/components/RefForwardingDivider';
 
 export default function Home() {
+  const aboutMeRef = React.useRef<HTMLDivElement>(null);
+  const skillsetRef = React.useRef<HTMLDivElement>(null);
+  const projectsRef = React.useRef<HTMLDivElement>(null);
+  const footerRef = React.useRef<HTMLDivElement>(null);
   return (
     <AppTheme>
       <CssBaseline enableColorScheme />
-      <AppAppBar />
+      <AppAppBar
+        aboutMeRef={aboutMeRef}
+        skillsetRef={skillsetRef}
+        projectsRef={projectsRef}
+        footerRef={footerRef}
+      />
+      <div ref={aboutMeRef}></div>
       <AboutMe />
       <div>
-        <Divider />
+        <RefForwardingDivider ref={skillsetRef} />
         <Skillset />
-        <Divider />
+        <RefForwardingDivider ref={projectsRef} />
         <Features />
-        <Divider />
+        <RefForwardingDivider ref={footerRef} />
         <Footer />
       </div>
     </AppTheme>
