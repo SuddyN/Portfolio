@@ -62,8 +62,7 @@ export default function Skillset() {
       sx={{
         pt: { xs: 4, sm: 12 },
         pb: { xs: 8, sm: 16 },
-        color: 'white',
-        bgcolor: 'grey.900',
+        color: 'text.primary',
       }}
     >
       <Container
@@ -84,10 +83,8 @@ export default function Skillset() {
           <Typography component="h2" variant="h4" gutterBottom>
             Skillset
           </Typography>
-          <Typography variant="body1" sx={{ color: 'grey.400' }}>
-            Explore why our product stands out: adaptability, durability,
-            user-friendly design, and innovation. Enjoy reliable customer
-            support and precision in every detail.
+          <Typography variant="body1" sx={{ color: 'text.secondary' }}>
+            {/* TODO: put some text here */}
           </Typography>
         </Box>
         <Grid container spacing={2}>
@@ -103,7 +100,6 @@ export default function Skillset() {
                   p: 3,
                   height: '100%',
                   borderColor: 'hsla(220, 25%, 25%, 0.3)',
-                  backgroundColor: 'grey.800',
                 }}
               >
                 <Box sx={{ opacity: '50%' }}>{item.icon}</Box>
@@ -111,7 +107,7 @@ export default function Skillset() {
                   <Typography gutterBottom sx={{ fontWeight: 'medium' }}>
                     {item.title}
                   </Typography>
-                  <Typography variant="body2" sx={{ color: 'grey.400' }}>
+                  <Typography variant="body2" sx={{ color: 'text.secondary' }}>
                     {item.description}
                   </Typography>
                 </div>

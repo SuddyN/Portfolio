@@ -20,8 +20,8 @@ export default function Home() {
         <Divider />
         <Skillset />
         <Divider />
-        {/* <Features /> */}
-        {/* <Divider /> */}
+        <Features />
+        <Divider />
         <Footer />
       </div>
     </AppTheme>
