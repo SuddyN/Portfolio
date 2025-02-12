@@ -60,8 +60,7 @@ export default function Skillset() {
     <Box
       id="skillset"
       sx={{
-        pt: { xs: 4, sm: 12 },
-        pb: { xs: 8, sm: 16 },
+        py: { xs: 10, sm: 16 },
         color: 'text.primary',
       }}
     >
