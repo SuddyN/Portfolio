@@ -84,10 +84,10 @@ export default function AppAppBar() {
                 HewDraw Remix
               </Button>
               <Button variant="text" color="info" size="small">
-                HDRStageTools
+                HDR Stage Tools
               </Button>
               <Button variant="text" color="info" size="small">
-                StartGGDiscordActions
+                StartGG Discord Actions
               </Button>
             </Box>
           </Box>
@@ -172,8 +172,8 @@ export default function AppAppBar() {
                   Projects
                 </MenuItem>
                 <MenuItem>HewDraw Remix</MenuItem>
-                <MenuItem>HDRStageTools</MenuItem>
-                <MenuItem>StartGGDiscordActions</MenuItem>
+                <MenuItem>HDR Stage Tools</MenuItem>
+                <MenuItem>StartGG Discord Actions</MenuItem>
                 <Divider sx={{ my: 3 }} />
                 <InputLabel htmlFor="email-menu" sx={visuallyHidden}>
                   Email
