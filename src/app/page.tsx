@@ -5,7 +5,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import AppTheme from '../shared-theme/AppTheme';
 import AppAppBar from '../components/AppAppBar';
 import AboutMe from '../components/AboutMe';
-import Features from '../components/Features';
+import Projects from '../components/Projects';
 import Footer from '../components/Footer';
 import Skillset from '@/components/Skillset';
 import { RefForwardingDivider } from '@/components/RefForwardingDivider';
@@ -30,7 +30,7 @@ export default function Home() {
         <RefForwardingDivider ref={skillsetRef} />
         <Skillset />
         <RefForwardingDivider ref={projectsRef} />
-        <Features />
+        <Projects />
         <RefForwardingDivider ref={footerRef} />
         <Footer />
       </div>

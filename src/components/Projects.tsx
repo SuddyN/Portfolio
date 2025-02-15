@@ -145,7 +145,7 @@ export function MobileLayout({
   );
 }
 
-export default function Features() {
+export default function Projects() {
   const [selectedItemIndex, setSelectedItemIndex] = React.useState(0);
 
   const handleItemClick = (index: number) => {
@@ -155,7 +155,7 @@ export default function Features() {
   const selectedFeature = items[selectedItemIndex];
 
   return (
-    <Container id="features" sx={{ py: { xs: 10, sm: 16 } }}>
+    <Container id="projects" sx={{ py: { xs: 10, sm: 16 } }}>
       <Box sx={{ width: { sm: '100%', md: '60%' } }}>
         <Typography
           component="h2"
@@ -163,14 +163,14 @@ export default function Features() {
           gutterBottom
           sx={{ color: 'text.primary' }}
         >
-          Product features
+          Product projects
         </Typography>
         <Typography
           variant="body1"
           sx={{ color: 'text.secondary', mb: { xs: 2, sm: 4 } }}
         >
-          Provide a brief overview of the key features of the product. For
-          example, you could list the number of features, their types or
+          Provide a brief overview of the key projects of the product. For
+          example, you could list the number of projects, their types or
           benefits, and add-ons.
         </Typography>
       </Box>
