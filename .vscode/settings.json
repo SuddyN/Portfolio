@@ -1,3 +1,4 @@
 {
-    "prettier.configPath": "/home/suddy/git/Portfolio/.prettierrc"
+    "prettier.configPath": "./.prettierrc",
+    "editor.formatOnSave": true
 }
