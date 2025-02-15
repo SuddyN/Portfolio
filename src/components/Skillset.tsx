@@ -98,7 +98,7 @@ export default function Skillset() {
                   color: 'inherit',
                   p: 3,
                   height: '100%',
-                  borderColor: 'hsla(220, 25%, 25%, 0.3)',
+                  borderColor: 'hsla(100, 25%, 25%, 0.3)',
                 }}
               >
                 <Box sx={{ opacity: '50%' }}>{item.icon}</Box>

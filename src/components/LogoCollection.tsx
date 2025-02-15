@@ -45,9 +45,9 @@ export default function LogoCollection() {
               <Image
                 src={logo[0]}
                 alt={logo[1]}
+                width={100}
+                height={100}
                 style={{
-                  width: 'auto',
-                  height: '100px',
                   margin: '16px 16px',
                   opacity: 1.0,
                   filter: !logo[2]

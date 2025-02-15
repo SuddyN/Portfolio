@@ -16,19 +16,19 @@ export default function FullWidthImageBox(props: FullWidthImageBoxProps) {
     height: 400,
     borderRadius: theme.shape.borderRadius,
     outline: '6px solid',
-    outlineColor: 'hsla(220, 25%, 80%, 0.2)',
+    outlineColor: 'hsla(0, 0.00%, 83.10%, 0.20)',
     border: '1px solid',
     borderColor: theme.palette.grey[200],
-    boxShadow: '0 0 12px 8px hsla(220, 25%, 80%, 0.2)',
+    boxShadow: '0 0 12px 8px hsla(0, 0.00%, 84.30%, 0.20)',
     backgroundImage: `url(${props.src})`,
     backgroundSize: 'cover',
     [theme.breakpoints.up('sm')]: {
       height: 700,
     },
     ...theme.applyStyles('dark', {
-      boxShadow: '0 0 24px 12px hsla(210, 100%, 25%, 0.2)',
+      boxShadow: '0 0 24px 12px hsla(0, 0.00%, 49.00%, 0.20)',
       backgroundImage: `url(${props.src})`,
-      outlineColor: 'hsla(220, 20%, 42%, 0.1)',
+      outlineColor: 'hsla(0, 0.00%, 51.80%, 0.10)',
       borderColor: theme.palette.grey[700],
     }),
   }));
