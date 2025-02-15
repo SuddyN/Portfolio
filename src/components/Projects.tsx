@@ -6,47 +6,68 @@ import MuiChip from '@mui/material/Chip';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import { styled } from '@mui/material/styles';
-
-import DevicesRoundedIcon from '@mui/icons-material/DevicesRounded';
-import EdgesensorHighRoundedIcon from '@mui/icons-material/EdgesensorHighRounded';
-import ViewQuiltRoundedIcon from '@mui/icons-material/ViewQuiltRounded';
+import Stack from '@mui/material/Stack';
+import {
+  DevicesRounded,
+  Twitter,
+  YouTube,
+  GitHub,
+  GamepadRounded,
+  NotificationsRounded,
+} from '@mui/icons-material';
 
 const items = [
   {
-    icon: <ViewQuiltRoundedIcon />,
-    title: 'Dashboard',
-    description:
-      'This item could provide a snapshot of the most important metrics or data points related to the product.',
-    imageLight: `url("${
-      process.env.TEMPLATE_IMAGE_URL || 'https://mui.com'
-    }/static/images/templates/templates-images/dash-light.png")`,
-    imageDark: `url("${
-      process.env.TEMPLATE_IMAGE_URL || 'https://mui.com'
-    }/static/images/templates/templates-images/dash-dark.png")`,
+    icon: <GamepadRounded />,
+    title: 'HewDraw Remix',
+    description: (
+      <>
+        A comprehensive gameplay overhaul mod for the Super Smash Bros.
+        Ultimate, which overhauls the game's engine, reworks characters and
+        mechanics, and adds new stages and music.
+      </>
+    ),
+    imageLight: `url(/images/HewDrawRemix.png)`,
+    imageDark: `url(/images/HewDrawRemix.png)`,
+    github: 'https://github.com/HDR-Development/HewDraw-Remix',
+    liveApp: null,
+    youtube: 'https://www.youtube.com/@HewDrawRemix',
+    twitter: 'https://x.com/HewDrawRemix',
   },
   {
-    icon: <EdgesensorHighRoundedIcon />,
-    title: 'Mobile integration',
-    description:
-      'This item could provide information about the mobile app version of the product.',
-    imageLight: `url("${
-      process.env.TEMPLATE_IMAGE_URL || 'https://mui.com'
-    }/static/images/templates/templates-images/mobile-light.png")`,
-    imageDark: `url("${
-      process.env.TEMPLATE_IMAGE_URL || 'https://mui.com'
-    }/static/images/templates/templates-images/mobile-dark.png")`,
+    icon: <DevicesRounded />,
+    title: 'HDR Stage Tools',
+    description: (
+      <>
+        A React-based single-page web app which interfaces with Desmos' API and
+        open source resources for HewDraw Remix to graph stage data and simulate
+        gameplay elements to the benefit of players ane event organizers.
+      </>
+    ),
+    imageLight: `url(/images/HDRStageTools.png)`,
+    imageDark: `url(/images/HDRStageTools.png)`,
+    github: 'https://github.com/SuddyN/HDRStageTools',
+    liveApp: 'https://hdr.suddy.dev',
+    youtube: null,
+    twitter: null,
   },
   {
-    icon: <DevicesRoundedIcon />,
-    title: 'Available on all platforms',
-    description:
-      'This item could let users know the product is available on all platforms, such as web, mobile, and desktop.',
-    imageLight: `url("${
-      process.env.TEMPLATE_IMAGE_URL || 'https://mui.com'
-    }/static/images/templates/templates-images/devices-light.png")`,
-    imageDark: `url("${
-      process.env.TEMPLATE_IMAGE_URL || 'https://mui.com'
-    }/static/images/templates/templates-images/devices-dark.png")`,
+    icon: <NotificationsRounded />,
+    title: 'Start.GG Discord Actions',
+    description: (
+      <>
+        A Discord Bot written in Python and executed via GitHub Actions, which
+        interfaces with the Start.GG API and Discord API to post daily and
+        weekly updates on upcoming tournament events for any competitive video
+        game on Start.GG's website.
+      </>
+    ),
+    imageLight: `url(/images/StartGGDiscordActions.png)`,
+    imageDark: `url(/images/StartGGDiscordActions.png)`,
+    github: 'https://github.com/SuddyN/StartGGDiscordActions',
+    liveApp: null,
+    youtube: null,
+    twitter: null,
   },
 ];
 
@@ -97,7 +118,7 @@ export function MobileLayout({
         gap: 2,
       }}
     >
-      <Box sx={{ display: 'flex', gap: 2, overflow: 'auto' }}>
+      <Box sx={{ display: 'flex', gap: 0.5, overflow: 'auto' }}>
         {items.map(({ title }, index) => (
           <Chip
             size="medium"
@@ -112,13 +133,14 @@ export function MobileLayout({
         <Box
           sx={(theme) => ({
             mb: 2,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
+            backgroundSize: 'contain',
             minHeight: 280,
             backgroundImage: 'var(--items-imageLight)',
             ...theme.applyStyles('dark', {
               backgroundImage: 'var(--items-imageDark)',
             }),
+            backgroundRepeat: 'no-repeat',
+            backgroundPosition: 'center center',
           })}
           style={
             items[selectedItemIndex]
@@ -139,6 +161,66 @@ export function MobileLayout({
           <Typography variant="body2" sx={{ color: 'text.secondary', mb: 1.5 }}>
             {selectedFeature.description}
           </Typography>
+          {items[selectedItemIndex].github && (
+            <Button
+              variant="contained"
+              color="primary"
+              size="small"
+              fullWidth
+              sx={{ flexShrink: 0, mb: 1 }}
+              onClick={(e) => {
+                window.open(items[selectedItemIndex].github ?? '/', '_blank');
+              }}
+            >
+              <GitHub sx={{ mr: 1 }} />
+              Source Code
+            </Button>
+          )}
+          {items[selectedItemIndex].liveApp && (
+            <Button
+              variant="contained"
+              color="primary"
+              size="small"
+              fullWidth
+              sx={{ flexShrink: 0, mb: 1 }}
+              onClick={(e) => {
+                window.open(items[selectedItemIndex].liveApp ?? '/', '_blank');
+              }}
+            >
+              <DevicesRounded sx={{ mr: 1 }} />
+              Visit Live App
+            </Button>
+          )}
+          {items[selectedItemIndex].twitter && (
+            <Button
+              variant="contained"
+              color="primary"
+              size="small"
+              fullWidth
+              sx={{ flexShrink: 0, mb: 1 }}
+              onClick={(e) => {
+                window.open(items[selectedItemIndex].twitter ?? '/', '_blank');
+              }}
+            >
+              <Twitter sx={{ mr: 1 }} />
+              Twitter
+            </Button>
+          )}
+          {items[selectedItemIndex].youtube && (
+            <Button
+              variant="contained"
+              color="primary"
+              size="small"
+              fullWidth
+              sx={{ flexShrink: 0, mb: 1 }}
+              onClick={(e) => {
+                window.open(items[selectedItemIndex].youtube ?? '/', '_blank');
+              }}
+            >
+              <YouTube sx={{ mr: 1 }} />
+              YouTube
+            </Button>
+          )}
         </Box>
       </Card>
     </Box>
@@ -163,15 +245,13 @@ export default function Projects() {
           gutterBottom
           sx={{ color: 'text.primary' }}
         >
-          Product projects
+          Personal Projects
         </Typography>
         <Typography
           variant="body1"
           sx={{ color: 'text.secondary', mb: { xs: 2, sm: 4 } }}
         >
-          Provide a brief overview of the key projects of the product. For
-          example, you could list the number of projects, their types or
-          benefits, and add-ons.
+          {/* TODO: free space for content here */}
         </Typography>
       </Box>
       <Box
@@ -253,19 +333,100 @@ export default function Projects() {
               height: '100%',
               width: '100%',
               display: { xs: 'none', sm: 'flex' },
-              pointerEvents: 'none',
+              position: 'relative',
             }}
           >
+            <Stack
+              direction="row"
+              spacing={1}
+              useFlexGap
+              sx={{
+                justifyContent: 'left',
+                color: 'text.secondary',
+                position: 'absolute',
+              }}
+            >
+              {items[selectedItemIndex].github && (
+                <Button
+                  variant="contained"
+                  color="primary"
+                  size="small"
+                  sx={{ flexShrink: 0 }}
+                  onClick={(e) => {
+                    window.open(
+                      items[selectedItemIndex].github ?? '/',
+                      '_blank'
+                    );
+                  }}
+                >
+                  <GitHub sx={{ mr: 1 }} />
+                  Source Code
+                </Button>
+              )}
+              {items[selectedItemIndex].liveApp && (
+                <Button
+                  variant="contained"
+                  color="primary"
+                  size="small"
+                  sx={{ flexShrink: 0 }}
+                  onClick={(e) => {
+                    window.open(
+                      items[selectedItemIndex].liveApp ?? '/',
+                      '_blank'
+                    );
+                  }}
+                >
+                  <DevicesRounded sx={{ mr: 1 }} />
+                  Visit Live App
+                </Button>
+              )}
+              {items[selectedItemIndex].twitter && (
+                <Button
+                  variant="contained"
+                  color="primary"
+                  size="small"
+                  sx={{ flexShrink: 0 }}
+                  onClick={(e) => {
+                    window.open(
+                      items[selectedItemIndex].twitter ?? '/',
+                      '_blank'
+                    );
+                  }}
+                >
+                  <Twitter sx={{ mr: 1 }} />
+                  Twitter
+                </Button>
+              )}
+              {items[selectedItemIndex].youtube && (
+                <Button
+                  variant="contained"
+                  color="primary"
+                  size="small"
+                  sx={{ flexShrink: 0 }}
+                  onClick={(e) => {
+                    window.open(
+                      items[selectedItemIndex].youtube ?? '/',
+                      '_blank'
+                    );
+                  }}
+                >
+                  <YouTube sx={{ mr: 1 }} />
+                  YouTube
+                </Button>
+              )}
+            </Stack>
             <Box
               sx={(theme) => ({
                 m: 'auto',
-                width: 420,
-                height: 500,
+                width: 500,
+                height: 420,
                 backgroundSize: 'contain',
                 backgroundImage: 'var(--items-imageLight)',
                 ...theme.applyStyles('dark', {
                   backgroundImage: 'var(--items-imageDark)',
                 }),
+                backgroundRepeat: 'no-repeat',
+                backgroundPosition: 'center center',
               })}
               style={
                 items[selectedItemIndex]

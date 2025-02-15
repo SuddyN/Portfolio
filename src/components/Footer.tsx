@@ -59,7 +59,7 @@ export default function Footer() {
             <Typography variant="body2" sx={{ color: 'text.secondary', mb: 2 }}>
               I'm searching for Full-Stack Software Engineer roles!
             </Typography>
-            <InputLabel htmlFor="email-menu" sx={visuallyHidden}>
+            <InputLabel htmlFor="email-footer" sx={visuallyHidden}>
               Email
             </InputLabel>
             <Stack direction="row" spacing={1} useFlexGap>
@@ -105,7 +105,7 @@ export default function Footer() {
             HDR Stage Tools
           </Link>
           <Link color="text.secondary" variant="body2">
-            StartGG Discord Actions
+            Start.GG Discord Actions
           </Link>
         </Box>
       </Box>
