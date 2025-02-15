@@ -47,7 +47,7 @@ export default function FullWidthImageBox(props: FullWidthImageBoxProps) {
           id="image"
           aria-label={props.label}
           sx={{ cursor: props.url ? 'pointer' : undefined }}
-          onClick={(e) => {
+          onClick={() => {
             if (!props.url) return;
             window.open(props.url, '_blank');
           }}

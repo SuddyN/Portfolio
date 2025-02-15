@@ -8,7 +8,7 @@ import AboutMe from '../components/AboutMe';
 import Projects from '../components/Projects';
 import Footer from '../components/Footer';
 import Skillset from '@/components/Skillset';
-import { RefForwardingDivider } from '@/components/RefForwardingDivider';
+import RefForwardingDivider from '@/components/RefForwardingDivider';
 import Divider from '@mui/material/Divider';
 
 export default function Home() {

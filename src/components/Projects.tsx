@@ -23,7 +23,7 @@ const items = [
     description: (
       <>
         A comprehensive gameplay overhaul mod for the Super Smash Bros.
-        Ultimate, which overhauls the game's engine, reworks characters and
+        Ultimate, which overhauls the game&apos;s engine, reworks characters and
         mechanics, and adds new stages and music.
       </>
     ),
@@ -39,9 +39,10 @@ const items = [
     title: 'HDR Stage Tools',
     description: (
       <>
-        A React-based single-page web app which interfaces with Desmos' API and
-        open source resources for HewDraw Remix to graph stage data and simulate
-        gameplay elements to the benefit of players ane event organizers.
+        A React-based single-page web app which interfaces with Desmos&apos; API
+        and open source resources for HewDraw Remix to graph stage data and
+        simulate gameplay elements to the benefit of players ane event
+        organizers.
       </>
     ),
     imageLight: `url(/images/HDRStageTools.png)`,
@@ -59,7 +60,7 @@ const items = [
         A Discord Bot written in Python and executed via GitHub Actions, which
         interfaces with the Start.GG API and Discord API to post daily and
         weekly updates on upcoming tournament events for any competitive video
-        game on Start.GG's website.
+        game on Start.GG&apos;s website.
       </>
     ),
     imageLight: `url(/images/StartGGDiscordActions.png)`,
@@ -147,7 +148,7 @@ export function MobileLayout({
               ? ({
                   '--items-imageLight': items[selectedItemIndex].imageLight,
                   '--items-imageDark': items[selectedItemIndex].imageDark,
-                } as any)
+                } as React.CSSProperties)
               : {}
           }
         />
@@ -168,7 +169,7 @@ export function MobileLayout({
               size="small"
               fullWidth
               sx={{ flexShrink: 0, mb: 1 }}
-              onClick={(e) => {
+              onClick={() => {
                 window.open(items[selectedItemIndex].github ?? '/', '_blank');
               }}
             >
@@ -183,7 +184,7 @@ export function MobileLayout({
               size="small"
               fullWidth
               sx={{ flexShrink: 0, mb: 1 }}
-              onClick={(e) => {
+              onClick={() => {
                 window.open(items[selectedItemIndex].liveApp ?? '/', '_blank');
               }}
             >
@@ -198,7 +199,7 @@ export function MobileLayout({
               size="small"
               fullWidth
               sx={{ flexShrink: 0, mb: 1 }}
-              onClick={(e) => {
+              onClick={() => {
                 window.open(items[selectedItemIndex].twitter ?? '/', '_blank');
               }}
             >
@@ -213,7 +214,7 @@ export function MobileLayout({
               size="small"
               fullWidth
               sx={{ flexShrink: 0, mb: 1 }}
-              onClick={(e) => {
+              onClick={() => {
                 window.open(items[selectedItemIndex].youtube ?? '/', '_blank');
               }}
             >
@@ -352,7 +353,7 @@ export default function Projects() {
                   color="primary"
                   size="small"
                   sx={{ flexShrink: 0 }}
-                  onClick={(e) => {
+                  onClick={() => {
                     window.open(
                       items[selectedItemIndex].github ?? '/',
                       '_blank'
@@ -369,7 +370,7 @@ export default function Projects() {
                   color="primary"
                   size="small"
                   sx={{ flexShrink: 0 }}
-                  onClick={(e) => {
+                  onClick={() => {
                     window.open(
                       items[selectedItemIndex].liveApp ?? '/',
                       '_blank'
@@ -386,7 +387,7 @@ export default function Projects() {
                   color="primary"
                   size="small"
                   sx={{ flexShrink: 0 }}
-                  onClick={(e) => {
+                  onClick={() => {
                     window.open(
                       items[selectedItemIndex].twitter ?? '/',
                       '_blank'
@@ -403,7 +404,7 @@ export default function Projects() {
                   color="primary"
                   size="small"
                   sx={{ flexShrink: 0 }}
-                  onClick={(e) => {
+                  onClick={() => {
                     window.open(
                       items[selectedItemIndex].youtube ?? '/',
                       '_blank'
@@ -433,7 +434,7 @@ export default function Projects() {
                   ? ({
                       '--items-imageLight': items[selectedItemIndex].imageLight,
                       '--items-imageDark': items[selectedItemIndex].imageDark,
-                    } as any)
+                    } as React.CSSProperties)
                   : {}
               }
             />

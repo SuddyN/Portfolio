@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Divider } from '@mui/material';
 
-export const RefForwardingDivider = React.forwardRef(
+const RefForwardingDivider = React.forwardRef(
   (props, ref: React.ForwardedRef<HTMLDivElement>) => {
     return (
       <div ref={ref}>
@@ -10,3 +10,6 @@ export const RefForwardingDivider = React.forwardRef(
     );
   }
 );
+
+RefForwardingDivider.displayName = 'RefForwardingDivider';
+export default RefForwardingDivider;

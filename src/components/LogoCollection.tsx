@@ -3,6 +3,7 @@ import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import { useTheme } from '@mui/system';
 import { Tooltip } from '@mui/material';
+import Image from 'next/image';
 
 const logos: [string, string, boolean?, string?, string?][] = [
   ['/images/html5-plain-wordmark.png', 'HTML 5'],
@@ -41,7 +42,7 @@ export default function LogoCollection() {
         {logos.map((logo, index) => (
           <Grid item key={index}>
             <Tooltip title={logo[1]}>
-              <img
+              <Image
                 src={logo[0]}
                 alt={logo[1]}
                 style={{

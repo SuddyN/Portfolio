@@ -47,7 +47,7 @@ export default function AboutMe() {
               fontSize: 'clamp(3rem, 10vw, 3.5rem)',
             }}
           >
-            Hi,&nbsp;I'm&nbsp;
+            Hi,&nbsp;I&apos;m&nbsp;
             <Typography
               component="span"
               variant="h1"
@@ -83,8 +83,8 @@ export default function AboutMe() {
               width: { sm: '100%', md: '100%' },
             }}
           >
-            I'm a Full-Stack Software Engineer, Game Developer, Event Organizer,
-            Community Leader, and life-long learner!
+            I&apos;m a Full-Stack Software Engineer, Game Developer, Event
+            Organizer, Community Leader, and life-long learner!
           </Typography>
           <Typography
             variant="h5"
@@ -108,7 +108,7 @@ export default function AboutMe() {
             color="text.secondary"
             sx={{ pt: 2, textAlign: 'center' }}
           >
-            I'm searching for Full-Stack Software Engineer roles!
+            I&apos;m searching for Full-Stack Software Engineer roles!
           </Typography>
           <Stack
             direction={{ xs: 'column', sm: 'row' }}
@@ -134,7 +134,7 @@ export default function AboutMe() {
               color="primary"
               size="small"
               sx={{ minWidth: 'fit-content' }}
-              onClick={(e) => {
+              onClick={() => {
                 window.open('mailto:suddy121800@hotmail.com', '_blank');
               }}
             >

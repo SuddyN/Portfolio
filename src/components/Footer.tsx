@@ -4,7 +4,6 @@ import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
 import IconButton from '@mui/material/IconButton';
 import InputLabel from '@mui/material/InputLabel';
-import Link from '@mui/material/Link';
 import Stack from '@mui/material/Stack';
 import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
@@ -57,7 +56,7 @@ export default function Footer() {
               Nathan Sudduth
             </Typography>
             <Typography variant="body2" sx={{ color: 'text.secondary', mb: 2 }}>
-              I'm searching for Full-Stack Software Engineer roles!
+              I&apos;m searching for Full-Stack Software Engineer roles!
             </Typography>
             <InputLabel htmlFor="email-footer" sx={visuallyHidden}>
               Email
@@ -79,7 +78,7 @@ export default function Footer() {
                 color="primary"
                 size="small"
                 sx={{ flexShrink: 0 }}
-                onClick={(e) => {
+                onClick={() => {
                   window.open('mailto:suddy121800@hotmail.com', '_blank');
                 }}
               >

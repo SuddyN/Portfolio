@@ -85,7 +85,7 @@ export default function AppAppBar({
 }: AppAppBarProps) {
   const [open, setOpen] = React.useState(false);
 
-  const toggleDrawer = (newOpen: boolean, callback?: Function) => () => {
+  const toggleDrawer = (newOpen: boolean, callback?: () => void) => () => {
     setOpen(newOpen);
     callback?.();
   };
@@ -167,7 +167,7 @@ export default function AppAppBar({
               color="primary"
               size="small"
               sx={{ minWidth: 'fit-content' }}
-              onClick={(e) => {
+              onClick={() => {
                 window.open('mailto:suddy121800@hotmail.com', '_blank');
               }}
             >
@@ -250,7 +250,7 @@ export default function AppAppBar({
                   fullWidth
                   size="small"
                   sx={{ minWidth: 'fit-content' }}
-                  onClick={(e) => {
+                  onClick={() => {
                     window.open('mailto:suddy121800@hotmail.com', '_blank');
                   }}
                 >
