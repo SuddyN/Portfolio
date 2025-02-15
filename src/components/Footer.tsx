@@ -10,6 +10,7 @@ import Typography from '@mui/material/Typography';
 import FacebookIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import visuallyHidden from '@mui/utils/visuallyHidden';
+import { Tooltip } from '@mui/material';
 
 export default function Footer() {
   return (
@@ -125,25 +126,30 @@ export default function Footer() {
           useFlexGap
           sx={{ justifyContent: 'left', color: 'text.secondary' }}
         >
-          <IconButton
-            color="inherit"
-            size="medium"
-            href="https://github.com/SuddyN"
-            target="_blank"
-            aria-label="GitHub"
-            sx={{ alignSelf: 'center' }}
-          >
-            <FacebookIcon />
-          </IconButton>
-          <IconButton
-            color="inherit"
-            size="medium"
-            href="https://www.linkedin.com/in/nathan-sudduth-46329b146/"
-            aria-label="LinkedIn"
-            sx={{ alignSelf: 'center' }}
-          >
-            <LinkedInIcon />
-          </IconButton>
+          <Tooltip title="GitHub">
+            <IconButton
+              color="inherit"
+              size="medium"
+              href="https://github.com/SuddyN"
+              target="_blank"
+              aria-label="GitHub"
+              sx={{ alignSelf: 'center' }}
+            >
+              <FacebookIcon />
+            </IconButton>
+          </Tooltip>
+          <Tooltip title="LinkedIn">
+            <IconButton
+              color="inherit"
+              size="medium"
+              href="https://www.linkedin.com/in/nathan-sudduth-46329b146/"
+              target="_blank"
+              aria-label="LinkedIn"
+              sx={{ alignSelf: 'center' }}
+            >
+              <LinkedInIcon />
+            </IconButton>
+          </Tooltip>
         </Stack>
       </Box>
     </Container>
