@@ -131,7 +131,7 @@ export default function AppAppBar({
                   footerRef.current?.scrollIntoView({ behavior: 'smooth' })
                 }
               />
-              <Button variant="text" color="info" size="small">
+              {/* <Button variant="text" color="info" size="small">
                 HewDraw Remix
               </Button>
               <Button variant="text" color="info" size="small">
@@ -139,7 +139,7 @@ export default function AppAppBar({
               </Button>
               <Button variant="text" color="info" size="small">
                 Start.GG Discord Actions
-              </Button>
+              </Button> */}
             </Box>
           </Box>
           <Box
@@ -226,9 +226,9 @@ export default function AppAppBar({
                     footerRef.current?.scrollIntoView({ behavior: 'smooth' })
                   )}
                 />
-                <MenuItem>HewDraw Remix</MenuItem>
+                {/* <MenuItem>HewDraw Remix</MenuItem>
                 <MenuItem>HDR Stage Tools</MenuItem>
-                <MenuItem>Start.GG Discord Actions</MenuItem>
+                <MenuItem>Start.GG Discord Actions</MenuItem> */}
                 <Divider sx={{ my: 3 }} />
                 <InputLabel htmlFor="email-menu" sx={visuallyHidden}>
                   Email

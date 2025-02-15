@@ -9,6 +9,7 @@ import Projects from '../components/Projects';
 import Footer from '../components/Footer';
 import Skillset from '@/components/Skillset';
 import { RefForwardingDivider } from '@/components/RefForwardingDivider';
+import Divider from '@mui/material/Divider';
 
 export default function Home() {
   const aboutMeRef = React.useRef<HTMLDivElement>(null);
@@ -31,9 +32,10 @@ export default function Home() {
         <Skillset />
         <RefForwardingDivider ref={projectsRef} />
         <Projects />
-        <RefForwardingDivider ref={footerRef} />
+        <Divider />
         <Footer />
       </div>
+      <div ref={footerRef} />
     </AppTheme>
   );
 }

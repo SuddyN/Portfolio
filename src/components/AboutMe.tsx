@@ -97,14 +97,14 @@ export default function AboutMe() {
             I graduated from NC State University with a Masters of Computer
             Science.
             <br />
-            In my free time, I like to lead, create, and tinker -- I maintain
-            several projects related to the Super Smash Bros. gameplay mod
-            called HewDraw Remix, run local tournaments and fundraising events,
-            and program Single Board Computers to improve my home and assist
-            other projects!
+            In my free time, I like to create, lead, and experiment. I maintain
+            several projects related to the Super Smash Bros. Ultimate gameplay
+            mod called HewDraw Remix, run local tournaments and fundraising
+            events, and tinker with Single Board Computers to improve my home
+            and support other projects!
           </Typography>
           <Typography
-            variant="caption"
+            // variant="caption"
             color="text.secondary"
             sx={{ pt: 2, textAlign: 'center' }}
           >

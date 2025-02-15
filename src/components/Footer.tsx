@@ -95,7 +95,7 @@ export default function Footer() {
             gap: 1,
           }}
         >
-          <Typography variant="body2" sx={{ fontWeight: 'medium' }}>
+          {/* <Typography variant="body2" sx={{ fontWeight: 'medium' }}>
             Projects
           </Typography>
           <Link color="text.secondary" variant="body2">
@@ -106,7 +106,7 @@ export default function Footer() {
           </Link>
           <Link color="text.secondary" variant="body2">
             Start.GG Discord Actions
-          </Link>
+          </Link> */}
         </Box>
       </Box>
       <Box
