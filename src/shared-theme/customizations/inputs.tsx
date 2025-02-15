@@ -60,7 +60,7 @@ export const inputsCustomizations: Components<Theme> = {
               color: 'white',
               backgroundColor: gray[900],
               backgroundImage: `linear-gradient(to bottom, ${gray[700]}, ${gray[800]})`,
-              boxShadow: `inset 0 1px 0 ${gray[600]}, inset 0 -1px 0 1px hsl(100, 0%, 0%)`,
+              boxShadow: `inset 0 1px 0 ${gray[600]}, inset 0 -1px 0 1px hsl(275, 0%, 0%)`,
               border: `1px solid ${gray[700]}`,
               '&:hover': {
                 backgroundImage: 'none',
@@ -74,7 +74,7 @@ export const inputsCustomizations: Components<Theme> = {
                 color: 'black',
                 backgroundColor: gray[50],
                 backgroundImage: `linear-gradient(to bottom, ${gray[100]}, ${gray[50]})`,
-                boxShadow: 'inset 0 -1px 0  hsl(100, 30%, 80%)',
+                boxShadow: 'inset 0 -1px 0  hsl(275, 30%, 80%)',
                 border: `1px solid ${gray[50]}`,
                 '&:hover': {
                   backgroundImage: 'none',
@@ -335,7 +335,7 @@ export const inputsCustomizations: Components<Theme> = {
         borderRadius: 5,
         border: '1px solid ',
         borderColor: alpha(gray[300], 0.8),
-        boxShadow: '0 0 0 1.5px hsla(100, 0%, 0%, 0.04) inset',
+        boxShadow: '0 0 0 1.5px hsla(275, 0%, 0%, 0.04) inset',
         backgroundColor: alpha(gray[100], 0.4),
         transition: 'border-color, background-color, 120ms ease-in',
         '&:hover': {
@@ -357,7 +357,7 @@ export const inputsCustomizations: Components<Theme> = {
         },
         ...theme.applyStyles('dark', {
           borderColor: alpha(gray[700], 0.8),
-          boxShadow: '0 0 0 1.5px hsl(100, 0%, 0%) inset',
+          boxShadow: '0 0 0 1.5px hsl(275, 0%, 0%) inset',
           backgroundColor: alpha(gray[900], 0.8),
           '&:hover': {
             borderColor: brand[300],

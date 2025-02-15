@@ -17,10 +17,10 @@ export default function AboutMe() {
         backgroundRepeat: 'no-repeat',
 
         backgroundImage:
-          'radial-gradient(ellipse 80% 50% at 50% -20%, hsl(100, 100%, 90%), transparent)',
+          'radial-gradient(ellipse 80% 50% at 50% -20%, hsl(275, 100%, 90%), transparent)',
         ...theme.applyStyles('dark', {
           backgroundImage:
-            'radial-gradient(ellipse 80% 50% at 50% -20%, hsl(100, 100%, 16%), transparent)',
+            'radial-gradient(ellipse 80% 50% at 50% -20%, hsl(275, 100%, 16%), transparent)',
         }),
       })}
     >

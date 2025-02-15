@@ -82,7 +82,7 @@ const Chip = styled(MuiChip)<ChipProps>(({ theme }) => ({
       props: ({ selected }) => selected,
       style: {
         background:
-          'linear-gradient(to bottom right, hsl(100, 98%, 48%), hsl(100, 98%, 35%))',
+          'linear-gradient(to bottom right, hsl(275, 98%, 48%), hsl(275, 98%, 35%))',
         color: 'hsl(0, 0%, 100%)',
         borderColor: theme.palette.primary.light,
         '& .MuiChip-label': {
